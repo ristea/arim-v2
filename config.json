@@ -1,0 +1,13 @@
+{
+  "no_fft_points": 2048,
+  "no_points": 1024,
+  "fs": 40e6,
+  "nperseg": 102,
+  "noverlap": 96,
+  "window_type": "hamming",
+
+  "classic": "./trained_models/fconv.pkl",
+  "wenort": "./trained_models/fconv_wenort.pkl",
+
+  "arim-v2-test": "./arim-v2_test.npy"
+}
