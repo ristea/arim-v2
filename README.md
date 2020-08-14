@@ -18,7 +18,7 @@ We provide two ways to obtain data:
 https://fmiunibuc-my.sharepoint.com/personal/radu_ionescu_fmi_unibuc_ro/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fradu%5Fionescu%5Ffmi%5Funibuc%5Fro%2FDocuments%2FARIM%2FARIM%2Dv2&originalPath=aHR0cHM6Ly9mbWl1bmlidWMtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvcmFkdV9pb25lc2N1X2ZtaV91bmlidWNfcm8vRXJwRW5vVmpSY05BcXgtcEt4WWVsREFCRm5uV1ExSFJWSlpXRkhiTXRXYzRaUT9ydGltZT1naGVIVldJNTJFZw
 
 ##### You can get the data set paper from here:
-https://TBD
+http://arxiv.org/abs/2008.05948
 
 ## Generate data set
 #### In order to generate the ARIM-v2 data set:
@@ -53,17 +53,27 @@ amplitudes = arim[()]['amplitudes'] # Amplitude information for targets
 
 ## Run our pretrained models
 
-TBD
+In **trained_models** there are ours pretrained models. In order to perform inference you have to use **main.py** script.
+In addition, we added a config file **config.json** with parameters and some paths. You must adapt this configuration file.
+  
+```bash
+python main.py
+```
 
 ## Cite us
-
-TBD
-
+```
+@article{ristea2020estimating,
+    title={Estimating Magnitude and Phase of Automotive Radar Signals under Multiple Interference Sources with Fully Convolutional Networks},
+    author={Nicolae-Cătălin Ristea and Andrei Anghel and Radu Tudor Ionescu},
+    journal={arXiv preprint arXiv:2008.05948},
+    year={2020}
+}
+```
 ## You can send your questions or suggestions to: 
 r.catalin196@yahoo.ro, raducu.ionescu@gmail.com
 
 ### Last Update:
-August 5, 2020 
+August 14, 2020 
 
 
 

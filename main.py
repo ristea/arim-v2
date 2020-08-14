@@ -9,12 +9,11 @@ from dataset import RadarDataset
 
 
 def process():
-    config = json.load(open('../config.json'))
+    config = json.load(open('./config.json'))
     config['device'] = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     # Load NN model
     network = FConv3Net().to(config['device'])
-    network.apply(FConv3Net.init_weights)
     checkpoint = torch.load(config['classic'], map_location=config['device'])
     network.load_state_dict(checkpoint['model_weights'])
 
@@ -24,7 +23,7 @@ def process():
     for i in range(0, len(dataset)):
         spect, sb0_fft, amplitudes = dataset.__getitem__(i)
 
-        in_spect = torch.tensor(np.expand_dims(spect, 0)).cuda().float()
+        in_spect = torch.tensor(np.expand_dims(spect, 0)).to(config['device']).float()
         fft_ml = network(in_spect)
         fft_ml = fft_ml.cpu().detach().numpy()[0]
 

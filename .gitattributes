@@ -1,0 +1,2 @@
+trained_models/fconv.pkl filter=lfs diff=lfs merge=lfs -text
+trained_models/fconv_wenort.pkl filter=lfs diff=lfs merge=lfs -text
