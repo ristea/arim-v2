@@ -8,11 +8,13 @@
 % SIR limits for an interference source are [-5 , SNR + 5] dB
 
 clear all;
+
+% Setting the numebr of interference sources
+nr_interferences = 2;
+
 % Setting a random generator for data set reproductibility
 rnd_seed = 706 + nr_interferences;
 rng(rnd_seed);
-
-nr_interferences = 2;
 
 
 snr_limits = [5, 40];
